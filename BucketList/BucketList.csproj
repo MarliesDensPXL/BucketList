@@ -1,0 +1,102 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>PE_BucketList</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\acropolis.png" />
+    <None Remove="images\arashiyama-bamboo-grove.png" />
+    <None Remove="images\cinque-terre.png" />
+    <None Remove="images\colosseum.png" />
+    <None Remove="images\dubrovnik-old-town.png" />
+    <None Remove="images\eiffel-tower.png" />
+    <None Remove="images\fushimi-inari-shrine.png" />
+    <None Remove="images\grand-canyon.png" />
+    <None Remove="images\great-barrier-reef.png" />
+    <None Remove="images\krka-waterfalls.png" />
+    <None Remove="images\louvre-museum.png" />
+    <None Remove="images\meteora.png" />
+    <None Remove="images\mont-saint-michel.png" />
+    <None Remove="images\mount-fuji.png" />
+    <None Remove="images\plitvice-lakes.png" />
+    <None Remove="images\santorini.png" />
+    <None Remove="images\sydney-opera-house.png" />
+    <None Remove="images\time-square.png" />
+    <None Remove="images\uluru.png" />
+    <None Remove="images\venice-canals.png" />
+    <None Remove="images\yellowstone.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="images\acropolis.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\arashiyama-bamboo-grove.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\cinque-terre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\colosseum.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\dubrovnik-old-town.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\eiffel-tower.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\fushimi-inari-shrine.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\grand-canyon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\great-barrier-reef.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\krka-waterfalls.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\louvre-museum.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\meteora.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mont-saint-michel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mount-fuji.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\plitvice-lakes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\santorini.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\sydney-opera-house.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\time-square.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\uluru.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\venice-canals.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\yellowstone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

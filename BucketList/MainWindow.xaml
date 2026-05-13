@@ -1,0 +1,37 @@
+﻿<Window x:Class="BucketList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BucketList"
+        mc:Ignorable="d"
+        Title="Bucket List"
+        Height="500" Width="900">
+    <Grid>
+        <Label Margin="320 20 0 20" HorizontalAlignment="Left"
+               Width="260"
+               VerticalAlignment="Top">
+            To Visit
+        </Label>
+        <TextBlock Name="nameTextBlock"
+            Margin="320 340 20 0">Name</TextBlock>
+        <TextBlock Name="cityTextBlock" 
+            Margin="320 370 20 0">City</TextBlock>
+        <Label Margin="620 20 0 0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top">
+            Rate place
+        </Label>
+        <Button Margin="620 100 0 20"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Width="240" Height="30" Click="RateButton_Click">
+            Rate Place</Button>
+        <Label Margin="620 180 0 20"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               >
+            Rated places
+        </Label>
+    </Grid>
+</Window>
