@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BucketList"
         mc:Ignorable="d"
         Title="Bucket List"
-        Height="500" Width="900">
+        Height="500" Width="900" Background="PaleGoldenrod" ResizeMode="NoResize">
     <Grid>
         <Label Margin="320 20 0 20" HorizontalAlignment="Left"
                Width="260"
