@@ -22,6 +22,8 @@ namespace BucketList
         public MainWindow()
         {
             InitializeComponent();
+            CreateBucketList();
+            LoadBucketListInListBox();
         }
 
         private void RateButton_Click(object sender, RoutedEventArgs e)
@@ -235,6 +237,16 @@ namespace BucketList
                     }
                 }
             };
+        }
+
+        private void LoadBucketListInListBox()
+        {
+            toVisitListBox.Items.Clear();
+            foreach (Country country in _bucketList)
+            {
+                toVisitListBox.Items.Add(country);
+            }
+            toVisitListBox.SelectedIndex = 0;
         }
     }
 }
