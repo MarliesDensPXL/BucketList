@@ -17,7 +17,7 @@ namespace BucketList
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Country> _bucketList = new List<Country>();
+        List<Country> _bucketList;
 
         public MainWindow()
         {
@@ -247,6 +247,23 @@ namespace BucketList
                 toVisitListBox.Items.Add(country);
             }
             toVisitListBox.SelectedIndex = 0;
+        }
+
+        private void LoadComboBoxItemsFromCountry(Country selectedCountry)
+        {
+            selectedCountryComboBox.Items.Clear();
+            foreach (Place place in selectedCountry.Places)
+            {
+                selectedCountryComboBox.Items.Add(place); 
+            }
+            selectedCountryComboBox.SelectedIndex = 0;
+        }
+
+        private void OnCountryToVisitChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Country selectedCountry = (Country)toVisitListBox.SelectedItem;
+
+            LoadComboBoxItemsFromCountry(selectedCountry);
         }
     }
 }
