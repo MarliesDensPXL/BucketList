@@ -18,6 +18,7 @@ namespace BucketList
     public partial class MainWindow : Window
     {
         List<Country> _bucketList;
+        Dictionary<Place, int> _placeRatings = new Dictionary<Place, int>();
 
         public MainWindow()
         {
@@ -28,6 +29,26 @@ namespace BucketList
 
         private void RateButton_Click(object sender, RoutedEventArgs e)
         {
+            int rating = 0;
+            Place selectedPlace = (Place)selectedPlaceComboBox.SelectedItem;
+
+            if (!int.TryParse(ratePlaceTextBox.Text, out rating) || rating > 10 || rating <= 0)
+            {
+                ratePlaceTextBox.Background = Brushes.Red;
+                return;
+            }
+            if (selectedPlace.IsVisited == false)
+            {
+                ratePlaceTextBox.Background = Brushes.Red;
+                return;
+            }
+
+            _placeRatings.Add(selectedPlace, rating);
+            ratePlaceTextBox.Background = Brushes.White;
+
+           
+            ratedPlacesListBox.Items.Add($"{selectedPlace} - {rating}");  
+            
 
         }
         private void CreateBucketList()
