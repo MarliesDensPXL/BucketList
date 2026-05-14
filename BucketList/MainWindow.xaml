@@ -15,19 +15,22 @@
         </Grid.ColumnDefinitions>
         
         <Image Grid.Column="0" Margin="20" HorizontalAlignment="Left" Width="260"/>
-        <DockPanel Grid.Column="1" LastChildFill="False" >
-            <Label Grid.Column="1" DockPanel.Dock="Top" Margin="20" HorizontalAlignment="Left"
+        <StackPanel Grid.Column="1" Orientation="Vertical"  >
+            <Label Grid.Column="1"  Margin="20" HorizontalAlignment="Left"
        Width="260"
        VerticalAlignment="Top">
                 To Visit
             </Label>
-            <ListBox Grid.Column="1" DockPanel.Dock="Top" Margin="20" HorizontalAlignment="Left" Width="260" Height="180" />
-            <TextBlock Grid.Column="1" DockPanel.Dock="Bottom" Name="cityTextBlock" VerticalAlignment="Bottom"
-Margin="20">City</TextBlock>
-            <TextBlock Grid.Column="1" DockPanel.Dock="Bottom" Name="nameTextBlock" VerticalAlignment="Bottom"
-    Margin="20">Name</TextBlock>
+            <ListBox   Margin="20" HorizontalAlignment="Left" Width="260" Height="180" />
+            <ComboBox  Width="260" Height="30"/>
             
-        </DockPanel>
+            <TextBlock   Name="nameTextBlock" VerticalAlignment="Bottom"
+Margin="20">Name</TextBlock>
+            <TextBlock  Name="cityTextBlock" VerticalAlignment="Bottom"
+Margin="20">City</TextBlock>
+            
+            
+        </StackPanel>
 
         
 
