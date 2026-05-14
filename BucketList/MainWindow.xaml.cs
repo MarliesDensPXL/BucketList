@@ -48,20 +48,22 @@ namespace BucketList
                 _placeRatings.Add(selectedPlace, rating);
                 ratePlaceTextBox.Background = Brushes.White;
 
-                ratedPlacesListBox.Items.Add($"{selectedPlace} - {rating}");
+               // ratedPlacesListBox.Items.Add($"{selectedPlace} - {rating}");
                 
             }
             else
             {
                 _placeRatings[selectedPlace] = rating;
                 
-               ratedPlacesListBox.Items.Add($"{selectedPlace} - {rating}");
+              // ratedPlacesListBox.Items.Add($"{selectedPlace} - {rating}");
 
             }
 
-           
-
-
+            ratedPlacesListBox.Items.Clear();
+            foreach (var kv in _placeRatings)
+            {
+                ratedPlacesListBox.Items.Add($"{kv.Key} - {kv.Value}");
+            }
 
         }
         private void CreateBucketList()
