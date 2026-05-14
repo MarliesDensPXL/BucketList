@@ -43,12 +43,25 @@ namespace BucketList
                 return;
             }
 
-            _placeRatings.Add(selectedPlace, rating);
-            ratePlaceTextBox.Background = Brushes.White;
+            if (!_placeRatings.ContainsKey(selectedPlace))
+            {
+                _placeRatings.Add(selectedPlace, rating);
+                ratePlaceTextBox.Background = Brushes.White;
+
+                ratedPlacesListBox.Items.Add($"{selectedPlace} - {rating}");
+                
+            }
+            else
+            {
+                _placeRatings[selectedPlace] = rating;
+                
+               ratedPlacesListBox.Items.Add($"{selectedPlace} - {rating}");
+
+            }
 
            
-            ratedPlacesListBox.Items.Add($"{selectedPlace} - {rating}");  
-            
+
+
 
         }
         private void CreateBucketList()
@@ -322,12 +335,15 @@ namespace BucketList
             {
                 selectedPlace.IsVisited = true;
             }
-            else           
+            else          
             {
                 selectedPlace.IsVisited = false;
             }
         }
 
-        
+        private void OnRatePlaceTextBoxTextChanged(object sender, TextChangedEventArgs e)
+        {
+            ratePlaceTextBox.Background = Brushes.White; 
+        }
     }
 }
