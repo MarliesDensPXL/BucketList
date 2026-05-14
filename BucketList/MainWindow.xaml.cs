@@ -66,8 +66,8 @@ namespace BucketList
             {
                 ratedPlacesListBox.Items.Add($"{kv.Key} - {kv.Value}");
             }
-
         }
+
         private void CreateBucketList()
         {
             _bucketList = new List<Country>
