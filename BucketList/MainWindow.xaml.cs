@@ -60,7 +60,9 @@ namespace BucketList
             }
 
             ratedPlacesListBox.Items.Clear();
-            foreach (var kv in _placeRatings)
+            var _sortedPlaces = _placeRatings.OrderByDescending(x => x.Value);
+
+            foreach (var kv in _sortedPlaces)
             {
                 ratedPlacesListBox.Items.Add($"{kv.Key} - {kv.Value}");
             }
@@ -297,6 +299,7 @@ namespace BucketList
 
         private void OnCountryToVisitChanged(object sender, SelectionChangedEventArgs e)
         {
+            ratePlaceTextBox.Clear();
             Country selectedCountry = (Country)toVisitListBox.SelectedItem;
 
             LoadComboBoxItemsFromCountry(selectedCountry);
@@ -323,6 +326,7 @@ namespace BucketList
 
         private void OnSelectedPlaceChanged(object sender, SelectionChangedEventArgs e)
         {
+            ratePlaceTextBox.Clear();
             Place selectedPlace = (Place)selectedPlaceComboBox.SelectedItem;
 
             LoadPlace(selectedPlace);
