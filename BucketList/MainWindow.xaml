@@ -16,20 +16,21 @@
         
         <Image Grid.Column="0" Margin="20" HorizontalAlignment="Left" Width="260"/>
         <StackPanel Grid.Column="1" Orientation="Vertical"  >
-            <Label Grid.Column="1"  Margin="20" HorizontalAlignment="Left"
+            <Label Grid.Column="1"  Margin="20,20,20,0" HorizontalAlignment="Left"
        Width="260"
        VerticalAlignment="Top">
                 To Visit
             </Label>
             <ListBox   Margin="20" HorizontalAlignment="Left" Width="260" Height="180" />
             <ComboBox  Width="260" Height="30"/>
-            
-            <TextBlock   Name="nameTextBlock" VerticalAlignment="Bottom"
-Margin="20">Name</TextBlock>
-            <TextBlock  Name="cityTextBlock" VerticalAlignment="Bottom"
-Margin="20">City</TextBlock>
-            
-            
+            <CheckBox x:Name="isVisitedCheckBox" Content="Is Visited" Margin="20,20,20,0"/>
+            <TextBlock   Name="nameTextBlock" 
+Margin="20,20,20,0">Name</TextBlock>
+            <TextBlock  Name="cityTextBlock" 
+Margin="20,20,20,0">City</TextBlock>
+            <TextBlock x:Name="descriptionTextBlock" Text="Description" Margin="20"  TextWrapping="Wrap"/>
+
+
         </StackPanel>
 
         
