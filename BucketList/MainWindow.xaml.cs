@@ -276,10 +276,11 @@ namespace BucketList
                 nameTextBlock.Text = place.Name;
                 cityTextBlock.Text = place.City;
                 descriptionTextBlock.Text = place.Description;
-                if (place.IsVisited)
-                {
-                    isVisitedCheckBox.IsChecked = true;
-                }
+            isVisitedCheckBox.IsChecked = place.IsVisited; // twee booleans dus moet niet via if else -> nu wordt checkbox ook uitgevinkt als waarde 'false' is.
+                //if (place.IsVisited)
+                //{
+                //    isVisitedCheckBox.IsChecked = true;
+                //}
                 placeImage.Source = new BitmapImage(new Uri($"{place.ImageSource}", UriKind.Relative));
             
         }
@@ -290,5 +291,22 @@ namespace BucketList
 
             LoadPlace(selectedPlace);
         }
+
+        private void OnIsVisitedCheckBoxChecked(object sender, RoutedEventArgs e)
+        {
+            Place selectedPlace = (Place)selectedPlaceComboBox.SelectedItem;
+
+            CheckBox cb = (CheckBox)sender;
+            if (cb.IsChecked == true)
+            {
+                selectedPlace.IsVisited = true;
+            }
+            else           
+            {
+                selectedPlace.IsVisited = false;
+            }
+        }
+
+        
     }
 }
