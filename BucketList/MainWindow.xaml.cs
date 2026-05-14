@@ -251,12 +251,12 @@ namespace BucketList
 
         private void LoadComboBoxItemsFromCountry(Country selectedCountry)
         {
-            selectedCountryComboBox.Items.Clear();
+            selectedPlaceComboBox.Items.Clear();
             foreach (Place place in selectedCountry.Places)
             {
-                selectedCountryComboBox.Items.Add(place); 
+                selectedPlaceComboBox.Items.Add(place); 
             }
-            selectedCountryComboBox.SelectedIndex = 0;
+            selectedPlaceComboBox.SelectedIndex = 0;
         }
 
         private void OnCountryToVisitChanged(object sender, SelectionChangedEventArgs e)
@@ -264,6 +264,31 @@ namespace BucketList
             Country selectedCountry = (Country)toVisitListBox.SelectedItem;
 
             LoadComboBoxItemsFromCountry(selectedCountry);
+        }
+
+        private void LoadPlace(Place place)
+        {
+            if (place == null)
+            {  
+                return; 
+            }
+            
+                nameTextBlock.Text = place.Name;
+                cityTextBlock.Text = place.City;
+                descriptionTextBlock.Text = place.Description;
+                if (place.IsVisited)
+                {
+                    isVisitedCheckBox.IsChecked = true;
+                }
+                placeImage.Source = new BitmapImage(new Uri($"{place.ImageSource}", UriKind.Relative));
+            
+        }
+
+        private void OnSelectedPlaceChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Place selectedPlace = (Place)selectedPlaceComboBox.SelectedItem;
+
+            LoadPlace(selectedPlace);
         }
     }
 }
