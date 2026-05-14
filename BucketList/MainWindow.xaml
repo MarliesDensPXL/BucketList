@@ -8,32 +8,48 @@
         Title="Bucket List"
         Height="500" Width="900" Background="PaleGoldenrod" ResizeMode="NoResize">
     <Grid>
-        <Image Margin="20" HorizontalAlignment="Left" Width="260"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Image Grid.Column="0" Margin="20" HorizontalAlignment="Left" Width="260"/>
+        <DockPanel Grid.Column="1" LastChildFill="False" >
+            <Label Grid.Column="1" DockPanel.Dock="Top" Margin="20" HorizontalAlignment="Left"
+       Width="260"
+       VerticalAlignment="Top">
+                To Visit
+            </Label>
+            <ListBox Grid.Column="1" DockPanel.Dock="Top" Margin="20" HorizontalAlignment="Left" Width="260" Height="180" />
+            <TextBlock Grid.Column="1" DockPanel.Dock="Bottom" Name="cityTextBlock" VerticalAlignment="Bottom"
+Margin="20">City</TextBlock>
+            <TextBlock Grid.Column="1" DockPanel.Dock="Bottom" Name="nameTextBlock" VerticalAlignment="Bottom"
+    Margin="20">Name</TextBlock>
+            
+        </DockPanel>
 
-        <Label Margin="320 20 0 20" HorizontalAlignment="Left"
-               Width="260"
-               VerticalAlignment="Top">
-            To Visit
-        </Label>
-        <TextBlock Name="nameTextBlock"
-            Margin="320 340 20 0">Name</TextBlock>
-        <TextBlock Name="cityTextBlock" 
-            Margin="320 370 20 0">City</TextBlock>
-        <Label Margin="620 20 0 0"
-               HorizontalAlignment="Left"
-               VerticalAlignment="Top">
-            Rate place
-        </Label>
-        <Button Margin="620 100 0 20"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Width="240" Height="30" Click="RateButton_Click">
-            Rate Place</Button>
-        <Label Margin="620 180 0 20"
-               HorizontalAlignment="Left"
-               VerticalAlignment="Top"
-               >
-            Rated places
-        </Label>
+        
+
+        <StackPanel Grid.Column="2">
+            <Label Grid.Column="2" Margin="20"
+       HorizontalAlignment="Left"
+       VerticalAlignment="Top">
+                Rate place
+            </Label>
+            <Button Grid.Column="2" Margin="20"
+        VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Width="240" Height="30" Click="RateButton_Click">
+                Rate Place</Button>
+            <Label Grid.Column="2"
+    Margin="20"
+       HorizontalAlignment="Left"
+       VerticalAlignment="Top"
+       >
+                Rated places
+            </Label>
+        </StackPanel>
+        
     </Grid>
 </Window>
