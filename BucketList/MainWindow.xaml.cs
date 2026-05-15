@@ -289,6 +289,8 @@ namespace BucketList
 
         private void LoadComboBoxItemsFromCountry(Country selectedCountry)
         {
+            
+            
             selectedPlaceComboBox.Items.Clear();
             foreach (Place place in selectedCountry.Places)
             {
@@ -301,6 +303,11 @@ namespace BucketList
         {
             ratePlaceTextBox.Clear();
             Country selectedCountry = (Country)toVisitListBox.SelectedItem;
+
+            if (selectedCountry == null)
+            {
+                return;
+            }
 
             LoadComboBoxItemsFromCountry(selectedCountry);
         }
